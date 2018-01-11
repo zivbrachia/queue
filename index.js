@@ -37,9 +37,9 @@ router.post('/', function (req, res) {
 
         let asyncAction = new ActionToQueue(subQueueId);
         // insert to queue the async object, sub queue id and the callback to activate after async object returned
-        queue.add(asyncAction, subQueueId, ActionToQueue.callbackQueueHandler);
+        queue.add(asyncAction.buildAction(), subQueueId, ActionToQueue.callbackQueueHandler);
     });
-    res.json("building");
+    res.json("send to queue");
     }).catch(function (err) {
         res.json({"error":err);
     });
