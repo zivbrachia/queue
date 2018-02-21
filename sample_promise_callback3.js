@@ -65,12 +65,12 @@ function isValidValue(value) {
 }
 
 // The actual promise
-function promise(value) {
-    return new Promise(function (resolve, reject) {
-        if (isValidValue(value)) {
-            resolve({ "text": value + " Bigger Then 5" });
-        } else {
-            reject(new Error(value + " Smaller then 5"));
-        }
-    });
-}
+// function promise(value) {
+//     return new Promise(function (resolve, reject) {
+//         if (isValidValue(value)) {
+//             resolve({ "text": value + " Bigger Then 5" });
+//         } else {
+//             reject(new Error(value + " Smaller then 5"));
+//         }
+//     });
+// }
